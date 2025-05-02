@@ -453,8 +453,9 @@ def task10():
     })
 
 if __name__ == '__main__':
-    # Iniciar ngrok en un hilo separado
-    start_ngrok(Config.NGROK_DOMAIN, Config.FLASK_PORT)
+    # Solo iniciar ngrok si es desarrollo local (no en Render)
+    if os.environ.get('RENDER') != 'true':
+        start_ngrok(Config.NGROK_DOMAIN, Config.FLASK_PORT)
     
-    # Iniciar la aplicación Flask
-    app.run(port=Config.FLASK_PORT, debug=True)
+    # Iniciar la aplicación Flask (escuchar en 0.0.0.0 para Render)
+    app.run(host='0.0.0.0', port=Config.FLASK_PORT, debug=True)
