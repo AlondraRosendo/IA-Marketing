@@ -1,0 +1,215 @@
+:root {
+    --primary-purple: #6B46C1;
+    --light-purple: #B794F4;
+    --very-light-purple: #E9D8FD;
+    --dark-purple: #4C2C92;
+    --text-dark: #2D3748;
+    --text-light: #F7FAFC;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--very-light-purple);
+    color: var(--text-dark);
+    margin: 0;
+}
+
+.header {
+    background: linear-gradient(135deg, var(--primary-purple), var(--light-purple));
+    color: var(--text-light);
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.sidebar {
+    background-color: var(--dark-purple);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 5rem;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-sticky {
+    padding: 1rem;
+}
+
+.nav-link {
+    color: var(--text-light);
+    background: transparent;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 500;
+    border: none;
+    display: block;
+    text-align: left;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--light-purple);
+    color: var(--text-dark);
+    transform: translateX(5px);
+}
+
+main {
+    margin-left: 250px;
+    padding: 2rem;
+}
+
+.task-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--primary-purple);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.task-container:hover {
+    transform: translateY(-3px);
+}
+
+.plot-container {
+    background: var(--very-light-purple);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.plotly-graph {
+    width: 100%;
+    height: 500px;
+}
+
+.plotly-graph-sm {
+    height: 250px;
+}
+
+.data-table {
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table {
+    background: white;
+    border: none;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--very-light-purple);
+}
+
+.highlight-box {
+    background: rgba(107, 70, 193, 0.1);
+    border-left: 4px solid var(--primary-purple);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.conclusion-box {
+    background: linear-gradient(135deg, rgba(107, 70, 193, 0.1), rgba(183, 148, 244, 0.1));
+    border: 1px solid var(--light-purple);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+.cluster-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.cluster-stats {
+    display: grid;
+    gap: 10px;
+}
+
+.cluster-stats li {
+    margin-bottom: 8px;
+}
+
+.cluster-description {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.feature-section {
+    background: var(--very-light-purple);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card-header {
+    background: var(--light-purple);
+    color: var(--text-dark);
+    border-radius: 8px 8px 0 0;
+}
+
+.feature-histograms {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.histogram-container {
+    background: var(--very-light-purple);
+    padding: 0.75rem;
+    border-radius: 6px;
+}
+
+.histogram-stats {
+    background: white;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    border-radius: 0 0 6px 6px;
+}
+
+footer {
+    background: var(--dark-purple);
+    color: var(--text-light);
+    padding: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        height: auto;
+        padding-top: 1rem;
+    }
+    main {
+        margin-left: 0;
+        padding: 1rem;
+    }
+    .nav-link {
+        text-align: center;
+    }
+}
